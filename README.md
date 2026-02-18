@@ -1,8 +1,8 @@
-[![CodeFactor](https://www.codefactor.io/repository/github/alexandresenpai/nhentai-api/badge)](https://www.codefactor.io/repository/github/alexandresenpai/nhentai-api)
-[![PyPI download month](https://img.shields.io/pypi/dm/NHentai-API.svg)](https://pypi.python.org/pypi/NHentai-API/)
-[![codecov](https://codecov.io/gh/AlexandreSenpai/NHentai-API/branch/dev/graph/badge.svg?token=F3LP15DYMR)](https://codecov.io/gh/AlexandreSenpai/NHentai-API)
-[![Python 3.9+](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/)
+
+This is an older, self-maintained version of [Enma](https://github.com/AlexandreSenpai/Enma) from 2020 to stay compatible with a related Discord bot. \
+Enma is more of a multi-API wrapper that is maintained by the original developer who knows more about this package from the inside out. \
+Please install and learn that instead of this. Thank you.
 
 # NHentai API
 
