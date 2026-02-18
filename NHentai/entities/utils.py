@@ -5,3 +5,4 @@ class Mimes(Enum):
   J: str = 'jpg'
   P: str = 'png'
   G: str = 'gif'
+  W: str = 'webp'

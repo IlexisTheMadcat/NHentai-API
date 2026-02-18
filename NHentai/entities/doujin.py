@@ -146,16 +146,17 @@ class Doujin(BaseClass):
 
 @dataclass
 class DoujinThumbnail(BaseClass):
-	id: str
-	media_id: str
-	title: List[Title]
-	languages: List[Tag]
-	cover: Cover
-	url: str
-	tags: List[Tag]
+        id: str
+        total_pages: int
+        media_id: str
+        title: List[Title]
+        languages: List[Tag]
+        cover: Cover
+        url: str
+        tags: List[Tag]
 
-	@classmethod
-	def from_json(cls, json_object: dict):
+        @classmethod
+        def from_json(cls, json_object: dict):
                 args = {"id": json_object.get('id'), 
                         "media_id": json_object.get('media_id'), 
                         "title": Title.from_json(json_object=json_object.get('title')),

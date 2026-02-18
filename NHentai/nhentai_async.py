@@ -84,7 +84,9 @@ class NHentaiAsync(BaseWrapper):
         """
 
         self.log(f'[INFO] Fetching random doujin...', end="\r")
-        async with ClientSession as session:
+        
+        print(f"Grabbing with Cloudflare cookie: {self._cookies['cf_clearance']}")
+        async with ClientSession(cookies=self._cookies) as session:
             async with session.get("https://nhentai.net/random") as resp:
                 new_url = str(resp.url)
 
@@ -213,15 +215,7 @@ class NHentaiAsync(BaseWrapper):
 
         for popular_doujin in DOUJINS:
             if popular_doujin is not None:
-                DOUJIN_LIST.append(
-                    DoujinThumbnail(
-                        id=popular_doujin.id,
-                        media_id=popular_doujin.media_id,
-                        title=popular_doujin.title,
-                        languages=popular_doujin.languages,
-                        cover=popular_doujin.cover,
-                        url=urljoin(self._BASE_URL, f"/g/{popular_doujin.id}"),
-                        tags=popular_doujin.tags))
+                DOUJIN_LIST.append(popular_doujin)
         
         return PopularPage(
             doujins=DOUJIN_LIST,
